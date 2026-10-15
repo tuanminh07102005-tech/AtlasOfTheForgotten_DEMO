@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas of the Forgotten - Urbex Tracker</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Optional: Bootstrap Icons for UI -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    /* Custom styling for the map placeholder to make it look like a web app */
+    body {
+      background-color: #f4f6f9;
+    }
+    #map-container {
+      height: 400px;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><i class="bi bi-geo-alt-fill"></i> Atlas of the Forgotten</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Database</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Dashboard Layout -->
+<div class="container-fluid mt-4 px-4">
+  <div class="row">
+
+    <!-- Left Column: Interactive Map & Site Details -->
+    <div class="col-lg-8 mb-4">
+
+      <!-- Map Card -->
+      <div class="card shadow-sm mb-4 border-0">
+        <div class="card-body p-2">
+          <!-- Placeholder for your JavaScript Map (e.g., HTML5 Canvas, D3, or simple image mapping) -->
+          <div id="map-container">
+            <p class="text-center">[ Interactive Map Area ]<br><small>JavaScript will capture clicks here to update the details below</small></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selected Site Details (To be dynamically populated by JS) -->
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <h3 id="siteTitle">Buzludzha Monument</h3>
+          <p class="text-muted" id="siteLocation"><i class="bi bi-pin-map"></i> Central Balkan Mountains, Bulgaria</p>
+          <p id="siteDescription">An abandoned communist headquarters built in 1981, left to decay on a remote mountain peak. Characterized by its brutalist, UFO-like architecture.</p>
+          <button class="btn btn-primary" id="addWishlistBtn"><i class="bi bi-plus-lg"></i> Add to Wishlist</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Safety Tracker & Dynamic Wishlist -->
+    <div class="col-lg-4">
+
+      <!-- Safety & Legal Permit Tracker (The "Visa" replacement) -->
+      <div class="card shadow-sm mb-4 border-0">
+        <div class="card-header bg-danger text-white">
+          <h5 class="card-title mb-0"><i class="bi bi-shield-exclamation"></i> Safety & Legal Status</h5>
+        </div>
+        <div class="card-body p-0">
+          <ul class="list-group list-group-flush" id="safetyTracker">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Legal Access
+              <span class="badge bg-danger rounded-pill">Trespassing Risk</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Structural Integrity
+              <span class="badge bg-warning text-dark rounded-pill">Deteriorating Roof</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Security Presence
+              <span class="badge bg-secondary rounded-pill">Intermittent</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Dynamic Exploration Wishlist -->
+      <div class="card shadow-sm border-0">
+        <div class="card-header bg-dark text-white">
+          <h5 class="card-title mb-0"><i class="bi bi-card-checklist"></i> My Wishlist</h5>
+        </div>
+        <div class="card-body">
+          <ul class="list-group" id="wishlist">
+            <!-- Default hardcoded item. JS will append more items here -->
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Svalbard Seed Vault (Exterior)
+              <span class="badge bg-primary rounded-pill">Planned</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center text-muted">
+              Hashima Island
+              <span class="badge bg-success rounded-pill">Visited</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap 5 JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom Prototype Script -->
+<script>
+  // This is where your Assignment logic will go.
+  // 1. Create an array of JSON objects containing your Urbex site data (Title, description, safety stats).
+  // 2. Add event listeners so when a user clicks the map, it updates the DOM elements (innerHTML) of the details and safety cards.
+  // 3. Write a function for the 'addWishlistBtn' that creates a new <li> element and appends it to the 'wishlist' <ul>.
+</script>
+</body>
+</html>
+<!-- Bootstrap 5 JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Kết nối với file app.js -->
+<script src="js/app.js"></script>
+
+</body>
+</html>
